@@ -28,15 +28,11 @@ def menu():
     while True:
         print("""
         *********************************************************************
-        :       A trote - aluguer de trotinetas                             : 
+        :       myTicketPT - Bilheteira de eventos                          : 
         *********************************************************************
         :                                                                   :
-        : tn - nova trotinera       tl - lista veiculos                     :
-        : un - novo utilizador      ul - lista utilizadores                 :
-        : an - novo aluguer         al - lista aluguers                     :
-        : ...                                                               :
-        : ...                                                               :
-        : ...                                                               :
+        : ne - novo evento          le - listar eventos                     :
+        :                                                                   :
         : g - guarda tudo           c - carrega tudo                        :
         :                                                                   :
         : x - sair                                                          :
