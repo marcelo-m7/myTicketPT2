@@ -55,14 +55,18 @@ def menu():
         elif op == "ul":
             imprime_lista_de_utilizadores(lista_de_utilizadores)
         elif op == "g":
-            guarda_as_listas_em_ficheiros(lista_de_trotinetas, lista_de_utilizadores)
+            guarda_as_listas_em_ficheiros(
+                lista_de_trotinetas, lista_de_utilizadores)
         elif op == "c":
             lista_de_trotinetas, lista_de_utilizadores = carrega_as_listas_dos_ficheiros()
         elif op == "an":
             if lista_de_utilizadores and lista_de_trotinetas:
-                id_comprador = pergunta_id(questao="Qual o id do comprador?", lista=lista_de_utilizadores)
-                id_veiculo = pergunta_id(questao="Qual o id do veiculo?", lista=lista_de_trotinetas)
-                lista_de_compras.append([id_comprador, id_veiculo, time.time()])
+                id_comprador = pergunta_id(
+                    questao="Qual o id do comprador?", lista=lista_de_utilizadores)
+                id_veiculo = pergunta_id(
+                    questao="Qual o id do veiculo?", lista=lista_de_trotinetas)
+                lista_de_compras.append(
+                    [id_comprador, id_veiculo, time.time()])
             else:
                 print("Erro: tem de ter utilizadores e trotinetas")
         elif op == "al":
@@ -85,7 +89,8 @@ def pergunta_id(questao, lista):
         if 0 <= idx < len(lista):
             return idx
         else:
-            print(f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
+            print(
+                f"id inexistente. Tente de novo. Valores admitidos {0} - {len(lista)}")
 
 
 def carrega_as_listas_dos_ficheiros():
@@ -106,11 +111,19 @@ def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores):
 
     op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)?")
     if op in ['s', 'S', '']:
-        guarda_em_ficheiro(nome_ficheiro_lista_de_trotinetas, lista_de_veiculos)
-        guarda_em_ficheiro(nome_ficheiro_lista_de_utilizadores, lista_de_utilizadores)
+        guarda_em_ficheiro(
+            nome_ficheiro_lista_de_trotinetas, lista_de_veiculos)
+        guarda_em_ficheiro(
+            nome_ficheiro_lista_de_utilizadores, lista_de_utilizadores)
     else:
         print("Cancelada.")
 
 
 if __name__ == "__main__":
     menu()
+
+
+def pagamento(metodos):
+    metodos = ['MasterCard', 'Visa', 'Paypal',
+               'MBway', 'Transferencia bancaria']
+    print(metodos)
