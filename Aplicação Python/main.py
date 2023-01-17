@@ -12,7 +12,6 @@ from io_terminal import (
 
 
 def menu():
-    """ main menu da aplicação"""
 
     lista_de_eventos = []
 
@@ -22,11 +21,11 @@ def menu():
         :       myTicketPT - Bilheteira de eventos                          : 
         *********************************************************************
         :                                                                   :
-        : ne - novo evento          le - listar eventos                     :
+        : ne - Novo Evento          le - Listar Eventos                     :
         :                                                                   :
-        : g - guarda tudo           c - carrega tudo                        :
+        : g - Guarda Tudo           c - Carregar Tudo                        :
         :                                                                   :
-        : x - sair                                                          :
+        : x - Sair                                                          :
         :                                                                   :
         *********************************************************************
         """)
@@ -45,6 +44,7 @@ def menu():
         elif op == "c":
             lista_de_eventos = carrega_as_listas_dos_ficheiros()
 
+
 def pergunta_id(questao, lista):
     imprime_lista_de_dicionarios(lista)
     while True:
@@ -56,19 +56,14 @@ def pergunta_id(questao, lista):
 
 
 def carrega_as_listas_dos_ficheiros():
-    """ ...todo... """
 
     lista_de_evento = le_de_ficheiro(nome_ficheiro_lista_de_eventos)
     return lista_de_evento
 
 
 def guarda_as_listas_em_ficheiros(lista_de_evento):
-    """ ... todo ....
-    :param lista_de_evento:
-    :return:
-    """
 
-    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/n)?")
+    op = input("Os dados nos ficheiros serão sobrepostos. Continuar (S/N)? ")
     if op in ['s', 'S', '']:
         guarda_em_ficheiro(nome_ficheiro_lista_de_eventos, lista_de_evento)
     else:
@@ -79,7 +74,7 @@ if __name__ == "__main__":
     menu()
 
 
-def pagamento(metodos):
+def pagamento():
     metodos = ['MasterCard', 'Visa', 'Paypal',
                'MBway', 'Transferencia bancaria']
     print(metodos)
