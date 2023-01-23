@@ -1,7 +1,7 @@
 from tabulate import tabulate
 
 
-def imprime_lista(cabecalho, lista):
+def imprime_lista(cabecalho, lista):  # estrutura da pagina na app
     """ Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho
 
     Recebe uma lista na forma [{"atrib1": valor 1, "atrib2": valor 2, ...},
@@ -27,6 +27,7 @@ def imprime_lista(cabecalho, lista):
     print(comprimento_cabecalho * ":")
 
 
+# def para o return da pagina e para que a app dê entrada e saida de paginas sem erros
 def imprime_lista_de_dicionarios(lista):
     """
     .... todo ....
@@ -37,7 +38,8 @@ def imprime_lista_de_dicionarios(lista):
         # cabecalho da tabela
         lista_a_imprimir = [["id"] + list(lista[0].keys())]
         # dados
-        lista_a_imprimir.extend([[id] + list(d.values()) for id, d in enumerate(lista)])
+        lista_a_imprimir.extend([[id] + list(d.values())
+                                for id, d in enumerate(lista)])
 
         print(tabulate(lista_a_imprimir, headers="firstrow"))
     else:

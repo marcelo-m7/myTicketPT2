@@ -18,7 +18,7 @@ from io_terminal import (
 import time
 
 
-def menu():
+def menu():  # def para o menu com todos os imports previamente feitos
     """ main menu da aplicação"""
 
     lista_de_trotinetas = []
@@ -101,6 +101,7 @@ def carrega_as_listas_dos_ficheiros():
     return lista_de_veiculos, lista_de_utilizadores
 
 
+# guarda todas as listas em ficheiros
 def guarda_as_listas_em_ficheiros(lista_de_veiculos, lista_de_utilizadores):
     """ ... todo ....
 
@@ -123,7 +124,7 @@ if __name__ == "__main__":
     menu()
 
 
-def pagamento(metodos):
+def pagamento(metodos):  # metodos de pagamento disponiveis na app
     metodos = ['MasterCard', 'Visa', 'Paypal',
                'MBway', 'Transferencia bancaria']
     print(metodos)

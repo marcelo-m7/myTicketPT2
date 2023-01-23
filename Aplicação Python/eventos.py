@@ -3,7 +3,7 @@ from io_terminal import imprime_lista
 nome_ficheiro_lista_de_eventos = "lista_de_eventos.pk"
 
 
-def cria_evento():
+def cria_evento():  # criação de evento
     nome_evento = input("Nome do evento ")
     artista = input("Artista ")
     sala = input("Sala ").upper()
@@ -13,5 +13,5 @@ def cria_evento():
     return {"Artista ": artista, "Sala ": sala, "Nome do evento: ": nome_evento, "Data do evento": data_inicio, "PVP do bilhete": pvp}
 
 
-def imprime_lista_de_eventos(lista_de_eventos):
+def imprime_lista_de_eventos(lista_de_eventos):  # return de todos os eventos
     imprime_lista(cabecalho="Lista de Eventos", lista=lista_de_eventos)
