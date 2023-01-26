@@ -1,3 +1,12 @@
+"""
+Menu principal da aplicação de venda de bilhetes
+
+:Date: 1 Jan 2023
+:Version: 0.1
+:Authors: Gonçalo Gomes, Ricardo Policarpo, Marcelo Santos
+"""
+
+
 from trotinetas import (
     cria_trotineta,
     imprime_lista_de_trotinetas,
@@ -18,7 +27,7 @@ from io_terminal import (
 import time
 
 
-def menu():  # def para o menu com todos os imports previamente feitos
+def menu():
     """ main menu da aplicação"""
 
     lista_de_trotinetas = []

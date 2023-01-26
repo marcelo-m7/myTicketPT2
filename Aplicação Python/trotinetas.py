@@ -3,7 +3,7 @@ from io_terminal import imprime_lista
 nome_ficheiro_lista_de_trotinetas = "lista_de_trotinetas.pk"
 
 
-def cria_trotineta():  # criação de trotineta para a possibilidade e facilidade de deslocamento
+def cria_trotineta():
     """ Pede ao utilizador para introduzir uma nova trotineta
 
     :return: dicionario com uma trotineta na forma 
@@ -15,7 +15,6 @@ def cria_trotineta():  # criação de trotineta para a possibilidade e facilidad
     return {"marca": marca, "matricula": modelo}
 
 
-# todas as trotinetas disponiveis
 def imprime_lista_de_trotinetas(lista_de_veiculos):
     """ ..."""
 

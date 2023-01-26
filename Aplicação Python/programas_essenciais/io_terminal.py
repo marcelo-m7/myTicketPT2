@@ -1,7 +1,16 @@
+"""
+Funções de i/o de terminal
+
+:Date: 1 Jan 2023
+:Version: 0.1
+:Authors: Gonçalo Gomes, Ricardo Policarpo, Marcelo Santos
+"""
+
+
 from tabulate import tabulate
 
 
-def imprime_lista(cabecalho, lista):  # estrutura da pagina na app
+def imprime_lista(cabecalho, lista):
     """ Imprime a :attr:`lista` na forma de uma tabela com um cabeçalho
 
     Recebe uma lista na forma [{"atrib1": valor 1, "atrib2": valor 2, ...},
@@ -27,7 +36,6 @@ def imprime_lista(cabecalho, lista):  # estrutura da pagina na app
     print(comprimento_cabecalho * ":")
 
 
-# def para o return da pagina e para que a app dê entrada e saida de paginas sem erros
 def imprime_lista_de_dicionarios(lista):
     """
     .... todo ....
